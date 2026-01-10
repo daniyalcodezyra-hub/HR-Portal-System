@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Responsiveness and PWA UX Fixes */
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --zinc-50: #fafafa;
+    --zinc-100: #f4f4f5;
+    --zinc-200: #e4e4e7;
+    --zinc-400: #a1a1aa;
+}
+
+/* Fix for mobile Safari height issue */
+html,
+body {
+    height: 100%;
+    overscroll-behavior-y: none;
+    /* Disable pull-to-refresh for PWA feel */
+}
+
+/* Adaptive Typography with Fluid Scaling */
+h1 {
+    font-size: clamp(2rem, 8vw, 6rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    word-break: break-word;
+}
+
+h2 {
+    font-size: clamp(1.75rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+    }
+}
+
+/* Table Responsiveness Hack */
+.overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar for desktop */
+@media (min-width: 1024px) {
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #000;
+        border-radius: 10px;
+    }
+}
+
+/* PWA Splash Screen prevention and UX */
+body {
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    /* Optional: prevent text selection for app feel */
+}
+
+input,
+textarea {
+    user-select: text;
+    /* Allow selection in inputs */
+}
+
+/* Animation utilities */
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mobile-only optimizations */
+@media (max-width: 1024px) {
+    .lg-sidebar-collapsed {
+        width: 0 !important;
+        overflow: hidden;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--zinc-200);
+    border-top: 4px solid var(--black);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Custom React Toastify Styles */
+.Toastify__toast {
+    border-radius: 20px !important;
+    font-family: inherit !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid #f4f4f5 !important;
+}
+
+.Toastify__toast-theme--light.Toastify__toast--success {
+    border-left: 6px solid #000 !important;
+}
+
+.Toastify__toast-theme--light.Toastify__toast--error {
+    border-left: 6px solid #ef4444 !important;
+}
+
+.Toastify__toast-theme--light.Toastify__toast--info {
+    border-left: 6px solid #a1a1aa !important;
+}
+
+.Toastify__toast-body {
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    font-size: 10px !important;
+    letter-spacing: 0.1em !important;
+}
+
+.Toastify__close-button {
+    color: #000 !important;
+}
+
+.Toastify__progress-bar {
+    background: #000 !important;
+}
