@@ -27,7 +27,7 @@ const Logs: React.FC = () => {
             if (logsRes.ok) setLogs(logsData || []);
             if (usersRes.ok) setUsers(usersData || []);
         } catch (error) {
-            console.error('Error fetching data:', error);
+            // console.error('Error fetching data:', error);
         } finally {
             setLoading(false);
         }

@@ -1,4 +1,9 @@
 {
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/admin/employees/page": "/admin/employees",
+  "/admin/logs/page": "/admin/logs",
+  "/admin/page": "/admin",
   "/api/announcements/route": "/api/announcements",
   "/api/attendance/route": "/api/attendance",
   "/api/auth/login/route": "/api/auth/login",
@@ -7,15 +12,11 @@
   "/api/auth/signup/route": "/api/auth/signup",
   "/api/leaves/route": "/api/leaves",
   "/api/users/route": "/api/users",
-  "/favicon.ico/route": "/favicon.ico",
-  "/_not-found/page": "/_not-found",
-  "/login/page": "/login",
-  "/page": "/",
-  "/signup/page": "/signup",
-  "/admin/employees/page": "/admin/employees",
-  "/admin/logs/page": "/admin/logs",
-  "/admin/page": "/admin",
   "/employee/history/page": "/employee/history",
   "/employee/page": "/employee",
-  "/employee/profile/page": "/employee/profile"
+  "/employee/profile/page": "/employee/profile",
+  "/favicon.ico/route": "/favicon.ico",
+  "/login/page": "/login",
+  "/page": "/",
+  "/signup/page": "/signup"
 }

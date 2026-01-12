@@ -11,9 +11,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true, // Temporarily ignore errors during migration
   },
-  eslint: {
-    ignoreDuringBuilds: true, // Temporarily ignore errors during migration
-  },
+  turbopack: {}, // Empty config to silence Turbopack warning in Next.js 16
 };
 
 module.exports = withPWA(nextConfig);

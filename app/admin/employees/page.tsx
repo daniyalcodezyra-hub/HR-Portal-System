@@ -25,7 +25,7 @@ const Employees: React.FC = () => {
                 setProfiles(data || []);
             }
         } catch (error) {
-            console.error('Error fetching profiles:', error);
+            // console.error('Error fetching profiles:', error);
         } finally {
             setLoading(false);
         }
